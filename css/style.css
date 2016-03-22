@@ -1,0 +1,322 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: url('../images/bg-dummy-04.jpg') no-repeat center transparent;
+    background-size: cover;
+    
+    font-family: roboto;
+    font-size: 16px;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, .9);
+    
+    position: fixed;
+    overflow: auto;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    background-color: #fff;
+    
+    box-shadow: 0 0 6px #333;
+    padding: 30px;
+    margin: 50px auto;
+    
+    max-width: 80%;    
+    width: 980px;
+}
+
+.modal-header h1 {
+    margin-bottom: 30px;
+    
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.modal-header h2 {
+    font-size: 16px;
+    font-weight: 500;
+    
+    display: inline-block;
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 400;
+    
+    display: inline-block;
+}
+
+.modal-header h3:before {
+    content: ' - ';
+}
+
+.modal-form {
+    margin-top: 30px;
+}
+
+.form-section {
+    box-sizing: border-box;
+    width: 50%;
+    
+    float: left;
+}
+
+.form-section.first {
+    padding-right: 20px;
+    border-right: 1px solid #aaa;
+}
+
+.form-section.second {
+    padding-left: 20px;
+}
+
+.form-label {
+    display: inline-block;
+    margin: 10px 0;
+    
+    width: 100%;
+}
+
+.form-label-name {
+    display: block;
+    margin-bottom: 3px;
+    
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-label input[type="text"],
+.form-label input[type="number"],
+.form-label textarea {
+    box-sizing: border-box;
+    border: 1px solid #363f46;
+    color: #363f46;
+    display: block;
+    
+    font-size: 16px;
+    
+    padding: 6px 10px;
+    width: 100%;
+    height: 34px;
+}
+
+.form-label textarea {
+    height: 80px;
+    
+    resize: none;
+}
+
+.option-list-parent {
+    position: relative;
+}
+
+.options-list {
+    background-color: #fff;
+    border: 1px solid #363f46;
+    
+    position: absolute;
+    
+    overflow: auto;
+        
+    width: 100%;
+    max-height: 200px;
+    
+    opacity: 0;
+    left: -9999px;
+    transition: opacity 500ms, left 1ms;
+    z-index: 2000;
+}
+
+.autocomplete-option {
+    box-sizing: border-box;
+    border-bottom: 1px solid #363f46;
+    
+    position: relative;
+    
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.autocomplete-option:after {
+    position: absolute;
+    content: '';
+    
+    width: 100%;
+    height: 100%;
+    
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.autocomplete-option:hover,
+.autocomplete-option.current-selected {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.option-logo {
+    width: 26px;
+    display: block;
+    float: left;
+    margin-top: 2px;
+}
+
+.option-name {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.option-value {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 34px;
+    padding: 1px 10px;
+    line-height: 30px;
+    border: 1px solid #363f46;
+}
+
+.option-list-parent input {
+    z-index: 20;
+    position: relative;
+    opacity: 0;
+}
+
+.option-list-parent.focused input {
+    opacity: 1;
+}
+
+.option-list-parent.focused .options-list {
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 1ms;
+}
+
+.option-list-parent.focused .options-list {
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 1ms;
+}
+
+.damage-section {
+    display: none;
+}
+
+.error-message {
+    color: #dc143c;
+    display: block;
+    
+    margin-top: 3px;
+    
+    font-size: 12px;
+    text-align: right;
+    font-style: italic;
+}
+
+.full-color-display {
+    width: 100%;
+    height: 100%;
+    
+    display: block;
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+}
+
+.color-square {
+    width: 10px;
+    height: 10px;
+    
+    display: inline-block;
+}
+.buttons-container {
+    padding-top: 30px;
+}
+
+.button {
+    width: 100px;
+    float: right;
+    margin-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #fff;
+    border: 0 none;
+    border-radius: 4px;
+    font-weight: 300;
+    font-family: roboto;
+    cursor: pointer;
+    
+    background-image: -ms-linear-gradient(bottom, #0091FF 0%, #2952CC 100%);
+    background-image: -moz-linear-gradient(bottom, #0091FF 0%, #2952CC 100%);
+    background-image: -o-linear-gradient(bottom, #0091FF 0%, #2952CC 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0091FF), color-stop(100, #2952CC));
+    background-image: -webkit-linear-gradient(bottom, #0091FF 0%, #2952CC 100%);
+    background-image: linear-gradient(to top, #0091FF 0%, #2952CC 100%);
+}
+
+.button.cancel {
+    background-image: -ms-linear-gradient(top, #FF5252 0%, #CC5656 100%);
+    background-image: -moz-linear-gradient(top, #FF5252 0%, #CC5656 100%);
+    background-image: -o-linear-gradient(top, #FF5252 0%, #CC5656 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FF5252), color-stop(100, #CC5656));
+    background-image: -webkit-linear-gradient(top, #FF5252 0%, #CC5656 100%);
+    background-image: linear-gradient(to bottom, #FF5252 0%, #CC5656 100%);
+}
+
+.button:hover {
+    background: #0091FF; 
+}
+
+.button.cancel:hover {
+    background: #FF5252; 
+}
+
+.form-label.half {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+
+.form-label.half.first {
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-section {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .form-section.first {
+        border: 0 none;
+    }
+    
+    .form-section.second {
+        padding: 0;
+    }
+    
+    .button {
+        margin-left: 0;
+        width: 50%;
+    }
+}
